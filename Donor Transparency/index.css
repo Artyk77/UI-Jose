@@ -1,0 +1,356 @@
+	/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+	html, body
+	{
+		height: 100%;
+	}
+	
+	body
+	{
+		margin: 0px;
+		padding: 0px;
+		background: #79C255;
+		font-family: 'Roboto', sans-serif;
+		font-size: 13pt;
+		font-weight: 200;
+		color: rgb(83, 80, 80);
+	}
+	
+	h1, h2
+	{
+		margin: 0;
+		padding: 0;
+		font-weight: 700;
+		color: #2B3F48;
+	}
+	
+	p, ul
+	{
+		margin-top: 0;
+	}
+	
+	 ul
+	{
+		padding: 0;
+		list-style: none;
+	}
+	
+	ul.button
+	{
+		text-align: center;
+	}
+		
+	p
+	{
+		line-height: 180%;
+	}
+	
+	a:hover
+	{
+		text-decoration-line: overline;
+		text-decoration-style: solid;
+	}
+	
+	.container
+	{
+		overflow: hidden;
+		margin: 0em auto;
+		width: 1000px;
+		
+	}
+
+/* Button Style    */
+
+	.button
+	{
+		display: inline-block;
+		padding: 0em 3em;
+		background: #79C255;
+		border-radius: 8px;
+		letter-spacing: 0.40em;
+		line-height: 1.5em;
+		text-decoration: none;
+		text-transform: lowercase;
+		font-weight: 200;
+		font-size: 1.2em;
+		color: #FFF;
+	}
+	
+/* Heading Titles      */
+
+
+	.title
+	{
+		margin-bottom: 3em;
+	}
+	
+	.title h2
+	{
+		
+		font-size: 2.7em;
+	}
+	
+	.title .byline
+	{
+		font-size: 1.7em;
+		color: white;
+	}
+		
+/* 1-column       */
+
+	.boxA,
+	.boxB,
+	.boxC
+	{
+		width: 310px;
+		border: solid;
+	}
+
+	.boxA,
+	.boxB
+	{
+		float: left;
+		margin-right: 23.5px;
+	}
+	
+	.boxC
+	{
+		float: right;
+	}
+
+
+/* 2-column     */
+
+
+	#wrapper
+	{
+		background: #FFF;
+	}
+
+
+/* Header              */
+
+
+	#header
+	{
+		position: relative;
+		padding: 5em 0em;
+	}
+
+
+/* Logo         */
+
+
+	#logo
+	{
+		position: absolute;
+		top: 4em;
+	}
+	
+	#logo a
+	{
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #79C255;
+	}
+
+/* Menu                  */
+
+	#menu
+	{
+		position: absolute;
+		top: 4.5em;
+		right: 0;
+	}
+	
+	#menu ul
+	{
+		display: inline-block;
+	}
+	
+	#menu li
+	{
+		display: block;
+		float: left;
+		text-align: center;
+	}
+	
+	#menu li a, #menu li span
+	{
+		padding: 1em 1.5em;
+		letter-spacing: 1px;
+		font-size: 1.4em;
+		color: #2B3F48;
+	}
+	
+	#menu li:hover a, #menu li.active a, #menu li.active span
+	{
+		color: #2B3F48;
+	}
+	
+	#menu .topnav a
+	{
+		border: 2px solid #79C255;
+		background: #79C255;
+		border-radius: 6px;
+		color: #FFF;
+	}
+	#topnav {
+		overflow: hidden;
+		background-color: #333;
+	  }
+	  
+	  /* Navbar links */
+
+	  #topnav a {
+		float: left;
+		display: block;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 14px;
+		text-decoration: none;
+	  }
+
+
+
+/* Banner  */
+
+
+	#banner
+	{
+		
+		padding: 30em 0em;
+		background: url(images/Indigenous-nav.jpg );
+		background-size: cover;
+		text-align: right ;
+		color: rgba(255,255,255,.8);
+	}
+
+	#banner .title
+	{
+		margin-bottom: 1em;
+		text-transform: uppercase !important;
+	}
+
+	#banner .title h2
+	{
+		color: rgb(255, 255, 255);
+		position:absolute;
+		width: 494px;
+		height: 300px;
+		left: 914px;
+		top: 446px;
+	}
+
+	#banner .title .byline
+	{
+		color: rgba(255,255,255,.6);
+	}
+	
+	#banner .button
+	{
+		margin-top: 5em;
+		background: #589937 !important;
+		position: absolute;
+		right: 30%;
+		bottom: 0%;
+		opacity: 0.8;
+		
+	}
+
+	.top {
+
+		text-align: center ;
+		padding: 1em 1.5em;
+		letter-spacing: 1px;
+		font-size: 1.4em;
+		color: white;
+
+	}
+
+.photo-row1 {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.photo-row2 {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 50px;
+	text-align: center;
+  }
+
+
+/* Page   */
+
+	#page
+	{
+		padding: 2em 0em 5em 0em;
+		text-align: center;
+	}
+	
+	#page .button
+	{
+		margin-top: 2em;
+		display: inline-block;
+		text-align: center;
+	}
+
+/* Footer Copyright     */
+
+	#copyright
+	{
+		overflow: hidden;
+		padding: 5em 0em;
+		border-top: 1px solid rgba(255,255,255,0.08);
+	}
+	
+	#copyright p
+	{
+		text-align: center;
+		font-size: 1em;
+		color: rgba(255,255,255,0.5);
+	}
+	
+	#copyright a
+	{
+		text-decoration: none;
+		color: rgba(255,255,255,0.8);
+	}
+
+
+/* Featured                                                                      */
+
+.box
+{
+	padding: 3em 2em 2em 2em;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 8px;
+		text-align: center;
+}
+
+
+	#extra
+	{
+		overflow: hidden;
+		padding: 5em 0em;
+	}
+	
+	#extra .title
+	{
+		text-align: center;
+	}
+	
+
+	.gallery
+	{
+		overflow: hidden;
+		margin-bottom: 3em;
+	}
+
+
+
