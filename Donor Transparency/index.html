@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width/>,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
+	<meta name="author" content="Jose Restrepo">
+	<meta name="description" content="donor management app">
+	<meta name="keywords" content="donations, tracker, indigenous, africa, donate, transparency" />
+	<meta name="description" content="" />
+	<title>Donor Transparency</title>
+	<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+	<link href="index.css" rel="stylesheet" type="text/css" />
+	<script src='https://unpkg.com/axios/dist/axios.min.js'></script>
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="header" class="container">
+			<div id="logo">
+				<h1><a href="index.html">Donor Transparency</a></h1>
+			</div>
+			<div id="menu">
+				<ul>
+					<li class="topnav">
+					<li><a href="about.html" title="">About</a></li>
+					<li><a href="https://donor-management-fe.netlify.com/login" title="topnav">Log In</a></li>
+					<li><a href="https://donor-management-fe.netlify.com/signup" title="topnav">Sign Up</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="banner">
+			<div class="container">
+				<div class="title">
+					<h2>Trustworthy and Accurate Donor Communication Tracking</h2>
+
+				</div>
+
+			</div>
+			<ul class="button">
+
+				<li><a href="https://donor-management-fe.netlify.com/signup" class="button">Sign Up</a></li>
+
+			</ul>
+		</div>
+		<div id="extra" class="container">
+			<div class="title">
+				<h2>Monthly Donor Tracker Log</h2>
+			</div>
+			<div id="first-column">
+				<div class="boxA">
+					<div class="box">
+						<p><span id="donors"></span> People Who Donated</p>
+					</div>
+				</div>
+				<div class="boxB">
+					<div class="box">
+						<p><span id="donation-lumpsum"></span> Annual Total Donations</p>
+					</div>
+				</div>
+			</div>
+			<div class="boxC">
+				<div class="box">
+					<p><span id="charities-count"></span> Charities Served</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="page" class="container">
+		<div class="title">
+			<h2>Keep Donating</h2>
+			<span class="byline">Africa needs your help</span>
+		</div>
+		<div class="gallery">
+			<div class="boxA"><img src="images/Indigenous-nav.jpg" width="320" height="200" alt="" /></div>
+			<div class="boxB"><img src="images/natives.jpg" width="320" height="200" alt="" /></div>
+			<div class="boxC"><img src="images/Africa.jpg" width="320" height="200" alt="" /></div>
+		</div>
+		<p>We are the world's best tracker app for grantmaking and fundraising. All our donations are publicly-available
+			by ensuring stringent traceability</p>
+
+	</div>
+	</div>
+	<div id="copyright" class="container">
+		<p>&copy; Donor Transparency Tracker. <br> All rights reserved. Jose Restrepo | <a href="#">Terms and
+				Conditions</a> | <a href="#">Privacy Statement</a></p>
+	</div>
+
+	<script>const donationLumpsum = document.getElementById('donation-lumpsum');
+		console.log(donationLumpsum);
+		axios.get('https://donor-manage-bw.herokuapp.com/api/donations/total').then((response) => { donationLumpsum.textContent = response.data.total })</script>
+
+	<script>const donors = document.getElementById('donors');
+		console.log(donors);
+		axios.get('https://donor-manage-bw.herokuapp.com/api/donor/count').then((response) => { donors.textContent = response.data.total })</script>
+
+	<script>const charitiesCount = document.getElementById('charities-count');
+		console.log(charitiesCount);
+		axios.get('https://donor-manage-bw.herokuapp.com/api/donations/count').then((response) => { charitiesCount.textContent = response.data.total })</script>
+
+
+
+
+</body>
+
+</html>
